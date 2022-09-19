@@ -11,10 +11,10 @@ class User {
 function fetch(): any {
     const getYear = (age: number) => String(new Date().getFullYear() - age)
     const users = [
-        {name: 'Anton', year: getYear(99)},
-        {name: 'Sergey', year: getYear(88)},
-        {name: 'Leha', year: getYear(77)},
-        {name: 'Billy', year: getYear(66)},
+        { name: 'Anton', year: getYear(99) },
+        { name: 'Sergey', year: getYear(88) },
+        { name: 'Leha', year: getYear(77) },
+        { name: 'Billy', year: getYear(66) },
     ]
 
     return JSON.parse(JSON.stringify(users))
@@ -43,11 +43,10 @@ class Fetcher {
     }
 }
 
-class Adapter extends Calculator {
+class Adapter {
     private fetcher: Fetcher;
 
     constructor(fetcher: Fetcher) {
-        super();
         this.fetcher = fetcher;
     }
 

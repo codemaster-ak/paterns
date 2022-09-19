@@ -2,13 +2,13 @@
 interface CarBuilder {
     setKolesa(count: number): void;
 
-    setKrysha(): void;
+    setKrysha(): any;
 
-    setOkna(): void;
+    setOkna(): any;
 
-    setDoors(count: number): void;
+    setDoors(count: number): any;
 
-    setBenzobak(): void;
+    setBenzobak(): any;
 }
 
 type Car = {

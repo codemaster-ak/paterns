@@ -10,7 +10,7 @@ class Summator {
     }
 
     /** Устанавливает тип стратегии */
-    setStrategy(strategy: SummStrategy) {
+    setStrategy(strategy: SummStrategy): void {
         this.strategy = strategy;
     }
 
@@ -28,7 +28,7 @@ class Summator {
             return result
         }
         if (this.strategy instanceof ObjectSummStrategy) {
-            const result = this.strategy.summ({kurs: 4, univer: 'ПГУ'}, {name: 'Антон'});
+            const result = this.strategy.summ({ kurs: 4, univer: 'ПГУ' }, { name: 'Антон' });
             console.log(result);
             return result
         }
@@ -48,7 +48,7 @@ class ArraySummStrategy implements SummStrategy {
 
 class ObjectSummStrategy implements SummStrategy {
     public summ<T extends object>(a: T, b: T): T {
-        return {...a, ...b};
+        return { ...a, ...b };
     }
 }
 
